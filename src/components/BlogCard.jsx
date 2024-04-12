@@ -1,9 +1,9 @@
 import { DateTime } from "luxon";
 
 export default function BlogCard({ blogPost }) {
-	const { title, author, dateString } = blogPost;
+	const { title, author, date: dateString } = blogPost;
 	const date = new Date(dateString);
-	const dateFormatted = DateTime.fromJSDate(this.date).toLocaleString(
+	const dateFormatted = DateTime.fromJSDate(date).toLocaleString(
 		DateTime.DATETIME_MED
 	);
 
