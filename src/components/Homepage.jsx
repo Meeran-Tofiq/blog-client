@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import HeroImage from "./HeroImage";
+import BlogCard from "./BlogCard";
 
 export default function Homepage({ fetch }) {
 	const [blogPosts, setBlogPosts] = useState([]);
@@ -28,7 +29,7 @@ export default function Homepage({ fetch }) {
 			</HeroImage>
 
 			{blogPosts.map((blogPost) => (
-				<div key={blogPost._id}>{blogPost.content}</div>
+				<BlogCard key={blogPost._id} blogPost={blogPost}></BlogCard>
 			))}
 		</>
 	);
