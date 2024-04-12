@@ -5,10 +5,15 @@ import App from "./App.jsx";
 import Homepage from "./components/Homepage.jsx";
 import "./index.css";
 
+async function customFetch(url) {
+	const res = fetch(import.meta.env.VITE_API_URL + url);
+	return res;
+}
+
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Homepage />,
+		element: <Homepage fetch={customFetch} />,
 	},
 ]);
 
