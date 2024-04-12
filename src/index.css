@@ -7,3 +7,28 @@
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+header {
+	text-align: center;
+	background-color: #000;
+	color: white;
+	padding: 2rem 0;
+}
+
+header h1 {
+	margin-bottom: 1rem;
+	border: 1px solid white;
+	display: inline-block;
+	padding: 0.5rem;
+}
+
+header nav {
+	list-style: none;
+}
+
+header nav a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+}
