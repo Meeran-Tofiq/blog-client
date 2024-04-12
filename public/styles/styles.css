@@ -32,3 +32,19 @@ header nav a {
 	padding: 0.5rem 1rem;
 	display: inline-block;
 }
+
+main .hero-image-container {
+	height: 25em;
+	background-size: cover;
+	background-position: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .hero-image-container .overlay {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 1rem;
+}
