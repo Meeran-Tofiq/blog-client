@@ -28,9 +28,13 @@ export default function Homepage({ fetch }) {
 				<h1>HEAR THE VOICE OF THE WORLD</h1>
 			</HeroImage>
 
-			{blogPosts.map((blogPost) => (
-				<BlogCard key={blogPost._id} blogPost={blogPost}></BlogCard>
-			))}
+			<ol>
+				{blogPosts.map((blogPost) => (
+					<li key={blogPost._id}>
+						<BlogCard blogPost={blogPost}></BlogCard>
+					</li>
+				))}
+			</ol>
 		</>
 	);
 }
