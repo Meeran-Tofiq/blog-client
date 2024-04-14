@@ -108,6 +108,12 @@ footer {
 }
 
 @media screen and (min-width: 1015px) {
+	#root {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
 	header {
 		display: flex;
 		justify-content: space-between;
@@ -132,5 +138,11 @@ footer {
 
 	main ol li {
 		width: calc(20% - 1rem);
+	}
+
+	footer {
+		margin-top: auto;
+		background-color: black;
+		color: white;
 	}
 }
