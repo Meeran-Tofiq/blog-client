@@ -63,6 +63,10 @@ main ol li {
 	margin-bottom: 1rem;
 }
 
+main ol li:last-child {
+	margin-bottom: 0;
+}
+
 main ol li article {
 	background-color: white;
 	padding: 1rem;
@@ -93,4 +97,12 @@ main ol li article p.truncate {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+footer {
+	background-color: white;
+	color: black;
+	text-align: center;
+	padding: 0.25rem;
+	margin: 0 1rem;
 }
