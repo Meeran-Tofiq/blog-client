@@ -59,6 +59,10 @@ main ol {
 	padding: 1rem;
 }
 
+main ol li {
+	margin-bottom: 1rem;
+}
+
 main ol li article {
 	background-color: white;
 	padding: 1rem;
