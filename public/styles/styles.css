@@ -106,3 +106,31 @@ footer {
 	padding: 0.25rem;
 	margin: 0 1rem;
 }
+
+@media screen and (min-width: 1015px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		padding: 3rem;
+		align-items: center;
+	}
+
+	header h1 {
+		margin: 0;
+	}
+
+	header nav ul {
+		display: flex;
+		gap: 1rem;
+		list-style: none;
+	}
+
+	main ol {
+		display: flex;
+		gap: 1rem;
+	}
+
+	main ol li {
+		width: calc(20% - 1rem);
+	}
+}
