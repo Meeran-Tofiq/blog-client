@@ -83,3 +83,10 @@ main ol li article header aside {
 	display: flex;
 	justify-content: space-between;
 }
+
+main ol li article p.truncate {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
