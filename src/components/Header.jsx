@@ -5,10 +5,10 @@ export default function Header({}) {
 			<nav>
 				<ul>
 					<li>
-						<a href="">Sign up</a>
+						<a href="/sign-up">Sign up</a>
 					</li>
 					<li>
-						<a href="">Log in</a>
+						<a href="/login">Log in</a>
 					</li>
 				</ul>
 			</nav>
