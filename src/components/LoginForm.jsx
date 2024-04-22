@@ -9,20 +9,23 @@ export default function LoginForm({ postFormData }) {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<label htmlFor="username">Username: </label>
-			<input
-				type="text"
-				id="username"
-				{...register("username", { required: true })}
-			/>
+			<fieldset>
+				<legend>Login Info</legend>
 
-			<label htmlFor="password">Password: </label>
-			<input
-				type="password"
-				id="password"
-				{...register("password", { required: true })}
-				required
-			/>
+				<label htmlFor="username">Username: </label>
+				<input
+					type="text"
+					id="username"
+					{...register("username", { required: true })}
+				/>
+
+				<label htmlFor="password">Password: </label>
+				<input
+					type="password"
+					id="password"
+					{...register("password", { required: true })}
+				/>
+			</fieldset>
 
 			<button type="submit">Log In</button>
 		</form>
