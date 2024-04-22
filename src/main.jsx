@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import Homepage from "./components/Homepage.jsx";
 import LoginForm from "./components/LoginForm.jsx";
+import SignUpForm from "./components/SignUpForm.jsx";
 
 async function customFetch(url) {
 	const res = fetch(import.meta.env.VITE_API_URL + url);
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
 	{
 		path: "/login",
 		element: <LoginForm postFormData={postFormData} />,
+	},
+	{
+		path: "/sign-up",
+		element: <SignUpForm postFormData={postFormData} />,
 	},
 ]);
 
