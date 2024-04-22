@@ -20,6 +20,11 @@ header {
 	padding: 2rem 0;
 }
 
+header a {
+	color: white;
+	text-decoration: none;
+}
+
 header h1 {
 	margin-bottom: 1rem;
 	border: 1px solid white;
