@@ -49,6 +49,10 @@ header nav a {
 	display: inline-block;
 }
 
+main {
+	flex: 1;
+}
+
 main .hero-image-container {
 	height: 25em;
 	background-size: cover;
