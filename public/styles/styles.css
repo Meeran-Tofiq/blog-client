@@ -54,7 +54,7 @@ main {
 }
 
 main .hero-image-container {
-	height: 25em;
+	height: 35rem;
 	background-size: cover;
 	background-position: center;
 
@@ -65,7 +65,8 @@ main .hero-image-container {
 
 main .hero-image-container .overlay {
 	color: white;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.9);
+	box-shadow: 0 0 15px black;
 	padding: 1rem;
 }
 
