@@ -70,7 +70,7 @@ main .hero-image-container .overlay {
 	padding: 1rem;
 }
 
-main ol {
+.blogPostList {
 	list-style: none;
 	padding: 1rem;
 
@@ -79,11 +79,11 @@ main ol {
 	gap: 1rem;
 }
 
-main ol li {
+.blogPostList li {
 	margin-bottom: 1rem;
 }
 
-main ol li:last-child {
+.blogPostList li:last-child {
 	margin-bottom: 0;
 }
 
@@ -167,7 +167,7 @@ footer {
 /* TABLET STYLES */
 
 @media screen and (min-width: 630px) {
-	main ol li:last-child {
+	.blogPostList li:last-child {
 		margin-bottom: 1rem;
 	}
 
