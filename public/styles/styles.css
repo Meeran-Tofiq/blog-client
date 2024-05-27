@@ -164,6 +164,18 @@ footer {
 	margin: 0 1rem;
 }
 
+/* TABLET STYLES */
+
+@media screen and (min-width: 630px) {
+	main ol li:last-child {
+		margin-bottom: 1rem;
+	}
+
+	.blogCard {
+		height: 100%;
+	}
+}
+
 @media screen and (min-width: 1015px) {
 	#root {
 		display: flex;
