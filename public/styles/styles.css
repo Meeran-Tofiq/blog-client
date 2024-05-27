@@ -87,12 +87,12 @@ main .hero-image-container .overlay {
 	margin-bottom: 0;
 }
 
-.blogCard {
+article {
 	background-color: white;
 	padding: 1rem;
 }
 
-.blogCard header {
+article header {
 	background-color: white;
 	color: black;
 	padding: 0;
@@ -107,12 +107,12 @@ main .hero-image-container .overlay {
 	border-bottom: 1px solid grey;
 }
 
-.blogCard header aside {
+article header aside {
 	display: flex;
 	justify-content: space-between;
 }
 
-.blogCard p.truncate {
+article p.truncate {
 	width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -173,6 +173,12 @@ footer {
 
 	.blogCard {
 		height: 100%;
+	}
+
+	.blogPost,
+	ol.blog-comments {
+		width: 50%;
+		margin: 0 auto;
 	}
 }
 
