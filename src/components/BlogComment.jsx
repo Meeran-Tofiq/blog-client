@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 
-export default function BlogComment(comment) {
+export default function BlogComment({ comment }) {
 	const { user, content, date: dateString } = blogPost;
 	const author = user.username;
 	const date = new Date(dateString);
