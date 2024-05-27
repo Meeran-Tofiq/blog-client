@@ -87,12 +87,12 @@ main ol li:last-child {
 	margin-bottom: 0;
 }
 
-main ol li article {
+.blogCard {
 	background-color: white;
 	padding: 1rem;
 }
 
-main ol li article header {
+.blogCard header {
 	background-color: white;
 	color: black;
 	padding: 0;
@@ -107,12 +107,12 @@ main ol li article header {
 	border-bottom: 1px solid grey;
 }
 
-main ol li article header aside {
+.blogCard header aside {
 	display: flex;
 	justify-content: space-between;
 }
 
-main ol li article p.truncate {
+.blogCard p.truncate {
 	width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
