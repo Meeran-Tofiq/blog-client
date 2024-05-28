@@ -9,8 +9,8 @@ export default function BlogComment({ comment }) {
 	);
 
 	return (
-		<article className="blogComment">
-			<header className="commentHeader">
+		<article className="blog-comment">
+			<header className="comment-header">
 				<h4>{author}</h4>
 				<h4>{dateFormatted}</h4>
 			</header>
