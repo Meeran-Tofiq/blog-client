@@ -1,10 +1,16 @@
 import { useForm } from "react-hook-form";
+import useFetchWithAuth from "../api/fetch";
 
-export default function SignUpForm({ postFormData }) {
+export default function SignUpForm({}) {
 	const { register, handleSubmit } = useForm();
+	const fetch = useFetchWithAuth();
 
 	async function onSubmit(formData, event) {
-		const res = await postFormData(formData, event, "/users");
+		event.preventDefault();
+		const res = await fetch("/users", {
+			method: "POST",
+			body: JSON.stringify(formData),
+		});
 	}
 
 	return (

@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import BlogComment from "./BlogComment";
 import BlogPost from "./BlogPost";
 import { useLocation } from "react-router-dom";
+import useFetchWithAuth from "../api/fetch";
 
-export default function BlogPage({ fetch }) {
+export default function BlogPage({}) {
 	const location = useLocation();
 	const { blogPost } = location.state;
 	const [comments, setComments] = useState([]);
+	const fetch = useFetchWithAuth();
 
 	useEffect(() => {
 		const fetchBlogComments = async () => {

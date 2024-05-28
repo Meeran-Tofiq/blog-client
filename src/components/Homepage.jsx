@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import HeroImage from "./HeroImage";
 import BlogCard from "./BlogCard";
+import useFetchWithAuth from "../api/fetch";
 
-export default function Homepage({ fetch }) {
+export default function Homepage({}) {
 	const [blogPosts, setBlogPosts] = useState([]);
+	const fetch = useFetchWithAuth();
 
 	useEffect(() => {
 		const fetchBlogs = async () => {
