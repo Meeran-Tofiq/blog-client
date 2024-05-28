@@ -6,6 +6,7 @@ import Homepage from "./components/Homepage.jsx";
 import LoginForm from "./components/LoginForm.jsx";
 import SignUpForm from "./components/SignUpForm.jsx";
 import BlogPage from "./components/BlogPage.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 
 async function customFetch(url) {
 	const res = fetch(import.meta.env.VITE_API_URL + url);
@@ -47,8 +48,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<App>
-			<RouterProvider router={router}></RouterProvider>
-		</App>
+		<AuthProvider>
+			<App>
+				<RouterProvider router={router}></RouterProvider>
+			</App>
+		</AuthProvider>
 	</React.StrictMode>
 );
