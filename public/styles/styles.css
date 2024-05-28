@@ -191,18 +191,18 @@ footer {
 		height: 100%;
 	}
 
-	header {
+	header.page-header {
 		display: flex;
 		justify-content: space-between;
 		padding: 3rem;
 		align-items: center;
 	}
 
-	header h1 {
+	header.page-header h1 {
 		margin: 0;
 	}
 
-	header nav ul {
+	header.page-header nav ul {
 		display: flex;
 		gap: 1rem;
 		list-style: none;

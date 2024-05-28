@@ -1,6 +1,6 @@
 export default function Header({}) {
 	return (
-		<header>
+		<header className="page-header">
 			<a href="/">
 				<h1>BLOG</h1>
 			</a>
