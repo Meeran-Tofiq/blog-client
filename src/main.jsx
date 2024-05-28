@@ -7,6 +7,7 @@ import LoginForm from "./components/LoginForm.jsx";
 import SignUpForm from "./components/SignUpForm.jsx";
 import BlogPage from "./components/BlogPage.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -15,11 +16,19 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/login",
-		element: <LoginForm />,
+		element: (
+			<ProtectedRoute>
+				<LoginForm />
+			</ProtectedRoute>
+		),
 	},
 	{
 		path: "/sign-up",
-		element: <SignUpForm />,
+		element: (
+			<ProtectedRoute>
+				<SignUpForm />
+			</ProtectedRoute>
+		),
 	},
 	{
 		path: "/blog-post/:blogPostId",
