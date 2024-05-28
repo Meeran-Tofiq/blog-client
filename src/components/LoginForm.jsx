@@ -1,17 +1,27 @@
 import { useForm } from "react-hook-form";
 import useFetchWithAuth from "../api/fetch";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm({}) {
 	const { register, handleSubmit } = useForm();
+	const { login } = useContext(AuthContext);
+	const navigate = useNavigate();
 	const fetch = useFetchWithAuth();
 
 	async function onSubmit(formData, event) {
 		event.preventDefault();
+
 		const res = await fetch("/users/login", {
 			method: "POST",
 			body: JSON.stringify(formData),
 		});
-		console.log(await res.json());
+		const json = await res.json();
+		const { token, user } = json.data;
+
+		login(token, user);
+		navigate("/");
 	}
 
 	return (
