@@ -179,7 +179,7 @@ footer {
 
 	.blogPost,
 	ol.blog-comments {
-		width: 40%;
+		width: 70%;
 		margin: 0 auto;
 	}
 }
@@ -206,6 +206,11 @@ footer {
 		display: flex;
 		gap: 1rem;
 		list-style: none;
+	}
+
+	.blogPost,
+	ol.blog-comments {
+		width: 40%;
 	}
 
 	footer {
