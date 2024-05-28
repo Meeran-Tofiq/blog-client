@@ -9,15 +9,15 @@ export default function BlogPost({ blogPost, isBlogCard }) {
 	);
 
 	return (
-		<article className={isBlogCard ? "blogCard" : "blogPost"}>
-			<header className="blogHeader">
+		<article className={isBlogCard ? "blog-card" : "blog-post"}>
+			<header className="blog-header">
 				<h2>{title}</h2>
 				<aside>
 					<h4>{author}</h4>
 					<h4>{dateFormatted}</h4>
 				</aside>
 			</header>
-			<main className="blogContent">
+			<main className="blog-content">
 				<p className={isBlogCard ? "truncate" : ""}>{content}</p>
 			</main>
 		</article>

@@ -28,7 +28,7 @@ export default function Homepage({ fetch }) {
 				<h1>HEAR THE VOICE OF THE WORLD</h1>
 			</HeroImage>
 
-			<ol className="blogPostList">
+			<ol className="blog-post-list">
 				{blogPosts.map((blogPost) => (
 					<li key={blogPost._id}>
 						<BlogCard blogPost={blogPost}></BlogCard>

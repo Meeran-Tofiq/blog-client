@@ -70,7 +70,7 @@ main .hero-image-container .overlay {
 	padding: 1rem;
 }
 
-.blogPostList {
+.blog-post-list {
 	list-style: none;
 	padding: 1rem;
 
@@ -79,11 +79,11 @@ main .hero-image-container .overlay {
 	gap: 1rem;
 }
 
-.blogPostList li {
+.blog-post-list li {
 	margin-bottom: 1rem;
 }
 
-.blogPostList li:last-child {
+.blog-post-list li:last-child {
 	margin-bottom: 0;
 }
 
@@ -169,15 +169,15 @@ footer {
 /* TABLET STYLES */
 
 @media screen and (min-width: 630px) {
-	.blogPostList li:last-child {
+	.blog-post-list li:last-child {
 		margin-bottom: 1rem;
 	}
 
-	.blogCard {
+	.blog-card {
 		height: 100%;
 	}
 
-	.blogPost,
+	.blog-post,
 	ol.blog-comments {
 		width: 70%;
 		margin: 0 auto;

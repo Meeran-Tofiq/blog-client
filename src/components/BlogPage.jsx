@@ -29,15 +29,18 @@ export default function BlogPage({ fetch }) {
 		<>
 			<BlogPost blogPost={blogPost} />
 
-			<ol className="blog-comments">
-				{comments.map((comment) => {
-					return (
-						<li key={comment._id}>
-							<BlogComment comment={comment} />
-						</li>
-					);
-				})}
-			</ol>
+			<div className="blog-comments-container">
+				<h2>Comments</h2>
+				<ol className="blog-comments">
+					{comments.map((comment) => {
+						return (
+							<li key={comment._id}>
+								<BlogComment comment={comment} />
+							</li>
+						);
+					})}
+				</ol>
+			</div>
 		</>
 	);
 }
