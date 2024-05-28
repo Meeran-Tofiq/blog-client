@@ -1,8 +1,13 @@
 import { useForm } from "react-hook-form";
 import useFetchWithAuth from "../api/fetch";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUpForm({}) {
 	const { register, handleSubmit } = useForm();
+	const { login } = useContext(AuthContext);
+	const navigate = useNavigate();
 	const fetch = useFetchWithAuth();
 
 	async function onSubmit(formData, event) {
@@ -11,6 +16,11 @@ export default function SignUpForm({}) {
 			method: "POST",
 			body: JSON.stringify(formData),
 		});
+		const json = await res.json();
+		const { token, user } = json.data;
+
+		login(token, user);
+		navigate("/");
 	}
 
 	return (
