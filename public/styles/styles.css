@@ -107,8 +107,10 @@ article header {
 	border-bottom: 1px solid grey;
 }
 
-article header aside {
+article header aside,
+header.comment-header {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 }
 
@@ -177,7 +179,7 @@ footer {
 
 	.blogPost,
 	ol.blog-comments {
-		width: 50%;
+		width: 40%;
 		margin: 0 auto;
 	}
 }
