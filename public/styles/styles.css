@@ -94,6 +94,10 @@ article {
 	padding: 1rem;
 }
 
+article.blog-post {
+	margin-bottom: 5rem;
+}
+
 article header {
 	background-color: white;
 	padding: 0;
@@ -113,6 +117,15 @@ header.comment-header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+}
+
+ol.blog-comments {
+	margin-top: 0.75rem;
+	list-style: none;
+}
+
+ol.blog-comments li {
+	margin-bottom: 0.5rem;
 }
 
 article p.truncate {
@@ -183,7 +196,7 @@ footer a {
 	}
 
 	.blog-post,
-	ol.blog-comments {
+	.blog-comments-container {
 		width: 70%;
 		margin: 0 auto;
 	}
@@ -218,7 +231,7 @@ footer a {
 	}
 
 	.blog-post,
-	ol.blog-comments {
+	.blog-comments-container {
 		width: 40%;
 	}
 
