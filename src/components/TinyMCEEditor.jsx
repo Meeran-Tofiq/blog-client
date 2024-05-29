@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { Editor } from "@tinymce/tinymce-react";
 
-export default function TinyMCEEditor({ content, setContent }) {
+export default function TinyMCEEditor({ initialContent, onContentChanged }) {
+	const [content, setContent] = useState(initialContent);
+
 	const handleEditorChange = (content) => {
 		setContent(content);
+		onContentChanged(content);
 	};
 
 	return (
 		<div>
 			<Editor
 				apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
-				initialValue="<p>This is the initial content of the editor</p>"
+				initialValue={`<p>${initialContent}</p>`}
 				init={{
 					height: 500,
 					menubar: false,
