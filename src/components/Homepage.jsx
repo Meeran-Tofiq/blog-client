@@ -7,22 +7,22 @@ export default function Homepage({}) {
 	const [blogPosts, setBlogPosts] = useState([]);
 	const fetch = useFetchWithAuth();
 
-	useEffect(() => {
-		const fetchBlogs = async () => {
-			try {
-				const res = await fetch("/blog-posts");
-				if (!res.ok) {
-					throw new Error("Failed to fetch blog posts");
-				}
-				const json = await res.json();
-				setBlogPosts(json.data);
-			} catch (error) {
-				console.error("Error fetching blog posts: ", error);
+	const fetchBlogs = async () => {
+		try {
+			const res = await fetch("/blog-posts");
+			if (!res.ok) {
+				throw new Error("Failed to fetch blog posts");
 			}
-		};
+			const json = await res.json();
+			setBlogPosts(json.data);
+		} catch (error) {
+			console.error("Error fetching blog posts: ", error);
+		}
+	};
 
+	useEffect(() => {
 		fetchBlogs();
-	}, [fetch]);
+	}, []);
 
 	return (
 		<>
