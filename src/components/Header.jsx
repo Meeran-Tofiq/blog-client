@@ -13,7 +13,9 @@ export default function Header({}) {
 				<ul>
 					{isAuthenticated ? (
 						<li>
-							<button onClick={logout}>Log out</button>
+							<button className="link-button" onClick={logout}>
+								Log out
+							</button>
 						</li>
 					) : (
 						<>
