@@ -36,6 +36,20 @@ export default function BlogComment({ comment, onCommentUpdated }) {
 		onCommentUpdated();
 	};
 
+	const handleCommentDelete = async (event) => {
+		event.preventDefault();
+
+		setEdit(false);
+		const res = await fetch(
+			`/blog-posts/${comment.blogPost}/comments/${comment._id}`,
+			{
+				method: "DELETE",
+			},
+			true
+		);
+		onCommentUpdated();
+	};
+
 	return (
 		<article className="blog-comment">
 			<header className="comment-header">
@@ -48,10 +62,16 @@ export default function BlogComment({ comment, onCommentUpdated }) {
 			{commentUser.username === user?.username ? (
 				<div className="editor-container">
 					<button
-						className="edit-button"
+						className="comment-control-button"
 						onClick={() => setEdit(!edit)}
 					>
 						Edit
+					</button>
+					<button
+						className="comment-control-button"
+						onClick={handleCommentDelete}
+					>
+						Delete
 					</button>
 					{edit ? (
 						<>
