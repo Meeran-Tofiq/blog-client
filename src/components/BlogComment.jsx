@@ -3,10 +3,10 @@ import { useContext, useState } from "react";
 import TinyMCEEditor from "./TinyMCEEditor";
 import useFetchWithAuth from "../api/fetch";
 import AuthContext from "../context/AuthContext";
+import Editor from "./Editor";
 
 export default function BlogComment({ comment, onCommentUpdated }) {
 	const { user } = useContext(AuthContext);
-	const [edit, setEdit] = useState(false);
 	const [newContent, setNewContent] = useState();
 	const fetch = useFetchWithAuth();
 
@@ -21,10 +21,7 @@ export default function BlogComment({ comment, onCommentUpdated }) {
 		setNewContent(content);
 	};
 
-	const handleCommentUpdate = async (event) => {
-		event.preventDefault();
-
-		setEdit(false);
+	const handleCommentUpdate = async () => {
 		const res = await fetch(
 			`/blog-posts/${comment.blogPost}/comments/${comment._id}`,
 			{
@@ -36,10 +33,7 @@ export default function BlogComment({ comment, onCommentUpdated }) {
 		onCommentUpdated();
 	};
 
-	const handleCommentDelete = async (event) => {
-		event.preventDefault();
-
-		setEdit(false);
+	const handleCommentDelete = async () => {
 		const res = await fetch(
 			`/blog-posts/${comment.blogPost}/comments/${comment._id}`,
 			{
@@ -60,31 +54,12 @@ export default function BlogComment({ comment, onCommentUpdated }) {
 				<p>{content}</p>
 			</main>
 			{commentUser.username === user?.username ? (
-				<div className="editor-container">
-					<button
-						className="comment-control-button"
-						onClick={() => setEdit(!edit)}
-					>
-						Edit
-					</button>
-					<button
-						className="comment-control-button"
-						onClick={handleCommentDelete}
-					>
-						Delete
-					</button>
-					{edit ? (
-						<>
-							<TinyMCEEditor
-								initialContent={content}
-								onContentChanged={onContentChanged}
-							/>
-							<button type="submit" onClick={handleCommentUpdate}>
-								Submit
-							</button>
-						</>
-					) : null}
-				</div>
+				<Editor
+					content={content}
+					onContentChanged={onContentChanged}
+					handleUpdate={handleCommentUpdate}
+					handleDelete={handleCommentDelete}
+				/>
 			) : null}
 		</article>
 	);
