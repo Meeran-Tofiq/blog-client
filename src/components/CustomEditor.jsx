@@ -11,21 +11,23 @@ export default function CustomEditor({
 
 	return (
 		<div className="editor-container">
-			<button
-				className="comment-control-button"
-				onClick={() => setEdit(!edit)}
-			>
-				Edit
-			</button>
-			<button
-				className="comment-control-button"
-				onClick={() => {
-					handleDelete();
-					setEdit(false);
-				}}
-			>
-				Delete
-			</button>
+			<div className="control-buttons">
+                <button
+                    className="comment-control-button"
+                    onClick={() => setEdit(!edit)}
+                >
+                    Edit
+                </button>
+                <button
+                    className="comment-control-button"
+                    onClick={() => {
+                        handleDelete();
+                        setEdit(false);
+                    }}
+                >
+                    Delete
+                </button>
+            </div>
 			{edit ? (
 				<>
 					<TinyMCEEditor

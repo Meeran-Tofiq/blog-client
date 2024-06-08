@@ -109,15 +109,18 @@ article.blog-post {
 article header {
 	background-color: white;
 	padding: 0;
-	padding-bottom: 0.5rem;
 	margin-bottom: 0.75rem;
 
 	display: flex;
 	flex-direction: column;
 	text-align: left;
 	gap: 0.5rem;
+}
 
-	border-bottom: 1px solid grey;
+article header,
+article main.comment-content {
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid lightgrey;
 }
 
 article header aside,
@@ -141,6 +144,22 @@ article p.truncate {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.editor-container button {
+	display: inline-block;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	padding: 0.25rem 0.5rem;
+	font-size: medium;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.control-buttons {
+	display: flex;
+	justify-content: space-between;
 }
 
 /* Forms */
