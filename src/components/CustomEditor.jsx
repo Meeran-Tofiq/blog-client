@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TinyMCEEditor from "./TinyMCEEditor";
 
-export default function Editor({
+export default function CustomEditor({
 	content,
 	onContentChanged,
 	handleUpdate,

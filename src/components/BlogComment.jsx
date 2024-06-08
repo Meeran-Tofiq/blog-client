@@ -2,7 +2,7 @@ import { DateTime } from "luxon";
 import { useContext, useState } from "react";
 import useFetchWithAuth from "../api/fetch";
 import AuthContext from "../context/AuthContext";
-import Editor from "./Editor";
+import Editor from "./CustomEditor";
 import ContentDisplay from "./ContentDisplay";
 
 export default function BlogComment({ comment, onCommentUpdated }) {
