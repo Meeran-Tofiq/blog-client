@@ -50,7 +50,7 @@ export default function BlogComment({ comment, onCommentUpdated }) {
 				<h4>{author}</h4>
 				<h4>{dateFormatted}</h4>
 			</header>
-			<main className="commentContent">
+			<main className="comment-content">
 				<ContentDisplay htmlContent={content} />
 			</main>
 			{commentUser.username === user?.username ? (
