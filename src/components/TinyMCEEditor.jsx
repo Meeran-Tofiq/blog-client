@@ -13,7 +13,7 @@ export default function TinyMCEEditor({ initialContent, onContentChanged }) {
 		<div>
 			<Editor
 				apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
-				initialValue={`<p>${initialContent}</p>`}
+				initialValue={initialContent}
 				init={{
 					height: 500,
 					menubar: false,
