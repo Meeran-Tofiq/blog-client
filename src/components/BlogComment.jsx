@@ -1,9 +1,9 @@
 import { DateTime } from "luxon";
 import { useContext, useState } from "react";
-import TinyMCEEditor from "./TinyMCEEditor";
 import useFetchWithAuth from "../api/fetch";
 import AuthContext from "../context/AuthContext";
 import Editor from "./Editor";
+import ContentDisplay from "./ContentDisplay";
 
 export default function BlogComment({ comment, onCommentUpdated }) {
 	const { user } = useContext(AuthContext);
@@ -51,7 +51,7 @@ export default function BlogComment({ comment, onCommentUpdated }) {
 				<h4>{dateFormatted}</h4>
 			</header>
 			<main className="commentContent">
-				<p>{content}</p>
+				<ContentDisplay htmlContent={content} />
 			</main>
 			{commentUser.username === user?.username ? (
 				<Editor
