@@ -2,7 +2,7 @@ import { DateTime } from "luxon";
 import { useContext, useState } from "react";
 import useFetchWithAuth from "../api/fetch";
 import AuthContext from "../context/AuthContext";
-import Editor from "./CustomEditor";
+import CommentControls from "./CommentControls";
 import ContentDisplay from "./ContentDisplay";
 
 export default function BlogComment({ comment, onCommentUpdated }) {
@@ -54,7 +54,7 @@ export default function BlogComment({ comment, onCommentUpdated }) {
 				<ContentDisplay htmlContent={content} />
 			</main>
 			{commentUser.username === user?.username ? (
-				<Editor
+				<CommentControls
 					content={content}
 					onContentChanged={onContentChanged}
 					handleUpdate={handleCommentUpdate}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TinyMCEEditor from "./TinyMCEEditor";
 
-export default function CustomEditor({
+export default function CommentControls({
 	content,
 	onContentChanged,
 	handleUpdate,
@@ -12,22 +12,22 @@ export default function CustomEditor({
 	return (
 		<div className="editor-container">
 			<div className="control-buttons">
-                <button
-                    className="comment-control-button"
-                    onClick={() => setEdit(!edit)}
-                >
-                    Edit
-                </button>
-                <button
-                    className="comment-control-button"
-                    onClick={() => {
-                        handleDelete();
-                        setEdit(false);
-                    }}
-                >
-                    Delete
-                </button>
-            </div>
+				<button
+					className="comment-control-button"
+					onClick={() => setEdit(!edit)}
+				>
+					Edit
+				</button>
+				<button
+					className="comment-control-button"
+					onClick={() => {
+						handleDelete();
+						setEdit(false);
+					}}
+				>
+					Delete
+				</button>
+			</div>
 			{edit ? (
 				<>
 					<TinyMCEEditor
