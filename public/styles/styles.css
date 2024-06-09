@@ -146,7 +146,8 @@ article p.truncate {
 	text-overflow: ellipsis;
 }
 
-.editor-container button {
+.editor-container button,
+.comment-create-container button {
 	display: inline-block;
 	background: none;
 	border: none;
@@ -155,6 +156,14 @@ article p.truncate {
 	padding: 0.25rem 0.5rem;
 	font-size: medium;
 	color: rgba(0, 0, 0, 0.7);
+}
+
+.comment-create-container {
+	margin: 1rem 0;
+}
+
+.comment-create-container button {
+	color: white;
 }
 
 .control-buttons {
