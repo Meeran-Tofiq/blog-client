@@ -20,7 +20,7 @@ export default function SignUpForm({}) {
 		const { token, user } = json.data;
 
 		login(token, user);
-		navigate("/");
+		navigate(-1);
 	}
 
 	return (

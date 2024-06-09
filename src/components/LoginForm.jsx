@@ -21,7 +21,7 @@ export default function LoginForm({}) {
 		const { token, user } = json.data;
 
 		login(token, user);
-		navigate("/");
+		navigate(-1);
 	}
 
 	return (
