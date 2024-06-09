@@ -4,7 +4,7 @@ This is the client-side of the blog-api project from The Odin Project. It's used
 
 ## The counterparts of this page
 
--   [blog-api]()
+-   [blog-api](https://github.com/Meeran-Tofiq/blog-api)
 -   [blog-cms]()
 
 # Tools used
