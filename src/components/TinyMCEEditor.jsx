@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Editor } from "@tinymce/tinymce-react";
 
-export default function TinyMCEEditor({ initialContent, onContentChanged }) {
+export default function TinyMCEEditor({
+	initialContent,
+	onContentChanged,
+	height,
+}) {
 	const [content, setContent] = useState(initialContent);
 
 	const handleEditorChange = (content) => {
@@ -15,7 +19,7 @@ export default function TinyMCEEditor({ initialContent, onContentChanged }) {
 				apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
 				initialValue={initialContent}
 				init={{
-					height: 500,
+					height: height || 500,
 					menubar: false,
 					plugins: [
 						"advlist autolink lists link image charmap print preview anchor",
