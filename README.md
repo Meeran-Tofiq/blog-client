@@ -24,3 +24,4 @@ This website can be viewed from the following [link]().
 # Credits
 
 [Andre Benz](https://unsplash.com/@trapnation)
+[Favicon](https://www.flaticon.com/authors/md-tanvirul-haque)
