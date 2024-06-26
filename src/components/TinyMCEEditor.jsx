@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Editor } from "@tinymce/tinymce-react";
 
 export default function TinyMCEEditor({
@@ -31,7 +31,6 @@ export default function TinyMCEEditor({
             alignleft aligncenter alignright alignjustify | \
             bullist numlist outdent indent | removeformat | help",
 				}}
-				value={content}
 				onEditorChange={handleEditorChange}
 			/>
 		</div>
