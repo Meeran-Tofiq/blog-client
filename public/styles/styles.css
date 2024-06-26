@@ -146,11 +146,33 @@ article p.truncate {
 	text-overflow: ellipsis;
 }
 
-.editor-container button,
-.comment-create-container button {
+.editor-container button {
 	display: inline-block;
 	background: none;
 	border: none;
+	cursor: pointer;
+
+	padding: 0.25rem 0.5rem;
+	font-size: medium;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.comment-create-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+.comment-create-container div,
+.comment-create-container #create-comment-button {
+	grid-column: 1 / span 2;
+}
+
+.comment-create-container button {
+	display: inline-block;
+	background: none;
+	border: 1px solid white;
+	margin: 0 auto;
 	cursor: pointer;
 
 	padding: 0.25rem 0.5rem;

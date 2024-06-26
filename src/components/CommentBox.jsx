@@ -37,7 +37,10 @@ export default function CommentBox({ blogPostId, handleCommentUpdated }) {
 					<button onClick={toggleIsCreatingComment}>Abort</button>
 				</>
 			) : (
-				<button onClick={toggleIsCreatingComment}>
+				<button
+					onClick={toggleIsCreatingComment}
+					id="create-comment-button"
+				>
 					Create a comment
 				</button>
 			)}
