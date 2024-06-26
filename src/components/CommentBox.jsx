@@ -4,7 +4,12 @@ import useFetchWithAuth from "../api/fetch";
 
 export default function CommentBox({ blogPostId, handleCommentUpdated }) {
 	const [content, setContent] = useState("");
+	const [isCreatingComment, setIsCreatingComment] = useState(false);
 	const fetch = useFetchWithAuth();
+
+	const toggleIsCreatingComment = () => {
+		setIsCreatingComment(!isCreatingComment);
+	};
 
 	const handleCommentPost = async () => {
 		const res = await fetch(
@@ -15,15 +20,27 @@ export default function CommentBox({ blogPostId, handleCommentUpdated }) {
 			},
 			true
 		);
-		if (res.ok) handleCommentUpdated();
+		if (res.ok) {
+			handleCommentUpdated();
+			toggleIsCreatingComment();
+		}
 	};
 
 	return (
 		<div className="comment-create-container">
-			<TinyMCEEditor onContentChanged={setContent} height={200} />
-			<button type="submit" onClick={handleCommentPost}>
-				Add comment
-			</button>
+			{isCreatingComment ? (
+				<>
+					<TinyMCEEditor onContentChanged={setContent} height={200} />
+					<button type="submit" onClick={handleCommentPost}>
+						Add comment
+					</button>
+					<button onClick={toggleIsCreatingComment}>Abort</button>
+				</>
+			) : (
+				<button onClick={toggleIsCreatingComment}>
+					Create a comment
+				</button>
+			)}
 		</div>
 	);
 }
