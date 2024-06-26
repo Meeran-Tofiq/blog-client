@@ -20,11 +20,7 @@ export default function CommentBox({ blogPostId, handleCommentUpdated }) {
 
 	return (
 		<div className="comment-create-container">
-			<TinyMCEEditor
-				initialContent={content}
-				onContentChanged={setContent}
-				height={200}
-			/>
+			<TinyMCEEditor onContentChanged={setContent} height={200} />
 			<button type="submit" onClick={handleCommentPost}>
 				Add comment
 			</button>
