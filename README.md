@@ -19,7 +19,7 @@ This is the client-side of the blog-api project from The Odin Project. It's used
 
 # Live preview
 
-This website can be viewed from the following [link]().
+This website can be viewed from the following [link](https://genuine-melomakarona-106e02.netlify.app/).
 
 # Credits
 
